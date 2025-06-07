@@ -16,11 +16,11 @@ jobs:
     - name: Conectar via SSH e fazer deploy
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{SERVER_HOST}}
-        username: ${{SERVER_USER}}
-        key: ${{SERVER_SSH_KEY}}
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
-         git clone https://github.com/Luigi052/Data-Ops-Atividade-III.git && cd ~/Data-Ops-Atividade-III
+          cd ~/seu-projeto || git clone https://github.com/SEU_USUARIO/SEU_REPO.git ~/seu-projeto && cd ~/seu-projeto
           git pull origin main
           docker stop calculadora || true
           docker rm calculadora || true
