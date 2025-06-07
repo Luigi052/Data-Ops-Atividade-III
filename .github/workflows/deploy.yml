@@ -23,7 +23,7 @@ jobs:
           if [ ! -d "Data-Ops-Atividade-III" ]; then
             git clone https://github.com/Luigi052/Data-Ops-Atividade-III.git
           fi
-          cd Data-Ops-Atividade-III
+          cd Data-Ops-Atividade-III/app
           git pull origin main
           sudo docker stop calculadora || true
           sudo docker rm calculadora || true
