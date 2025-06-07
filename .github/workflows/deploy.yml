@@ -20,7 +20,10 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
-          cd ~/seu-projeto || git clone https://github.com/SEU_USUARIO/SEU_REPO.git ~/seu-projeto && cd ~/seu-projeto
+          if [ ! -d "Data-Ops-Atividade-III" ]; then
+            git clone https://github.com/Luigi052/Data-Ops-Atividade-III.git
+          fi
+          cd Data-Ops-Atividade-III
           git pull origin main
           docker stop calculadora || true
           docker rm calculadora || true
