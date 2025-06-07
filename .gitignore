@@ -1,0 +1,18 @@
+# Arquivos do macOS
+.DS_Store
+
+# PyCharm / VSCode
+.idea/
+*.iml
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.env
+.venv
+
+# Outros
+*.log
