@@ -25,7 +25,7 @@ jobs:
           fi
           cd Data-Ops-Atividade-III
           git pull origin main
-          docker stop calculadora || true
-          docker rm calculadora || true
-          docker build -t calculadora .
-          docker run -d -p 80:80 --name calculadora calculadora
+          sudo docker stop calculadora || true
+          sudo docker rm calculadora || true
+          sudo docker build -t calculadora .
+          sudo docker run -d -p 80:80 --name calculadora calculadora
